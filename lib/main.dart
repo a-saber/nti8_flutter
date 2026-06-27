@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget{
 
 }
 
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -42,112 +43,68 @@ class HomeScreen extends StatelessWidget {
       ),
 
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Center(child: Text('Hello')),
-          Container(
-              decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                        offset: Offset(0, 10),
-                        color: Colors.grey,
-                        blurRadius: 15,
-                        spreadRadius: 10
-                    )
-                  ]
-              ),
-              child: Icon(Icons.eighteen_mp, size: 60,)),
-
-
-          Container(
-            child: Text('Hello World Hi Ahmed ', style: TextStyle(
-              fontSize: 30,
-              backgroundColor: Colors.amber,
-              letterSpacing: -1,
-              wordSpacing: 5,
-              decoration: TextDecoration.underline,
-              decorationColor: Colors.red,
-              decorationThickness: 2,
-              decorationStyle: TextDecorationStyle.dashed
-            ),),
-          ),
-          SizedBox(height: 50,),
-
+        children:
+        [
+          //
           Container(
             width: 100,
             height: 100,
-            // color: Colors.grey,
             decoration: BoxDecoration(
-              // color: Colors.red,
-              borderRadius: BorderRadius.circular(20),
-              // shape: BoxShape.circle,
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                Colors.red,
-                // Colors.black,
-                Colors.blue,
-              ]),
-              border: Border.all(
-                color: Colors.green,
-                width: 3
-              ),
-              boxShadow: [
-                BoxShadow(
-                  offset: Offset(0, 10),
-                  color: Colors.black,
-                  blurRadius: 15,
-                  spreadRadius: 10
-                )
-              ]
-
+              shape: BoxShape.circle,
+              color: Colors.green
             ),
             alignment: Alignment.center,
-            child: Text('Hi', style: TextStyle(
-              fontSize: 30
-            ),),
+            child: Text('Hi'),
           ),
 
+          //
 
+          Text('Hello'),
+
+
+          //
           Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: 20
-            ),
+            padding: const EdgeInsets.all(20.0),
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.grey,
+                borderRadius: BorderRadius.circular(20),
                 border: Border.all(
-                  color: Colors.black
-                ),
-                borderRadius: BorderRadius.circular(10)
+                  color: Colors.black,
+                  width: 2
+                )
               ),
-              child: Padding(
-                padding: EdgeInsets.all(20.0),
-                child: Row(
-                  children: [
-                    Container(
-                      height: 50,
-                      width: 50,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.red
+              padding: EdgeInsets.all(20),
+              child: Column(
+                children:
+                [
+                  //
+                  CircleAvatar(
+                    radius: 30,
+                    backgroundColor: Colors.red,
+                  ),
+              
+                  SizedBox(height: 30,),
+              
+                  //
+                  Row(
+                    children: [
+                      //
+                      Container(
+                        width: 50,
+                        height: 25,
+                        color: Colors.grey,
                       ),
-                    ),
-                    SizedBox(width: 20,),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Hello'),
-                        Text('USer Name'),
-                      ],
-                    )
-                  ],
-                ),
+              
+                      SizedBox(width: 20,),
+                      //
+                      Text('data')
+                    ],
+                  )
+                ],
               ),
             ),
           )
+
         ],
       ),
 
