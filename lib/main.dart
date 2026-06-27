@@ -108,6 +108,45 @@ class HomeScreen extends StatelessWidget {
             child: Text('Hi', style: TextStyle(
               fontSize: 30
             ),),
+          ),
+
+
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 20
+            ),
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.grey,
+                border: Border.all(
+                  color: Colors.black
+                ),
+                borderRadius: BorderRadius.circular(10)
+              ),
+              child: Padding(
+                padding: EdgeInsets.all(20.0),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.red
+                      ),
+                    ),
+                    SizedBox(width: 20,),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Hello'),
+                        Text('USer Name'),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ),
           )
         ],
       ),
