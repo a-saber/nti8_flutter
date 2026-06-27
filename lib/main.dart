@@ -43,69 +43,43 @@ class HomeScreen extends StatelessWidget {
       ),
 
       body: Column(
-        children:
-        [
-          //
+        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          // Expanded(
+          //   flex: 4,
+          //   child: Container(
+          //     color: Colors.blue,
+          //   ),
+          // ),
+          // Expanded(
+          //   flex: 2,
+          //   child: Container(
+          //     color: Colors.red,
+          //   ),
+          // ),
+          
           Container(
-            width: 100,
             height: 100,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.green
-            ),
-            alignment: Alignment.center,
-            child: Text('Hi'),
+            width: 200,
+            color: Colors.blue,
           ),
+          Spacer(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Icon(Icons.person),
+              // Spacer(),
+              Text('username')
+            ],
+          ),
+          Spacer(),
 
-          //
-
-          Text('Hello'),
-
-
-          //
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                border: Border.all(
-                  color: Colors.black,
-                  width: 2
-                )
-              ),
-              padding: EdgeInsets.all(20),
-              child: Column(
-                children:
-                [
-                  //
-                  CircleAvatar(
-                    radius: 30,
-                    backgroundColor: Colors.red,
-                  ),
-              
-                  SizedBox(height: 30,),
-              
-                  //
-                  Row(
-                    children: [
-                      //
-                      Container(
-                        width: 50,
-                        height: 25,
-                        color: Colors.grey,
-                      ),
-              
-                      SizedBox(width: 20,),
-                      //
-                      Text('data')
-                    ],
-                  )
-                ],
-              ),
-            ),
-          )
-
-        ],
+          Container(
+            height: 100,
+            width: 200,
+            color: Colors.blue,
+          ),
+        ]
       ),
 
     );
